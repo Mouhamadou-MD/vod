@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Recherhce Vod</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" href="style/vod.css">
+    </head>
+    <body>
+		
+<nav>
+		<ul>
+			<li class="deroulant"><a href= "vod.html">Acceuil</a></li>
+			<li class="deroulant"><a>Menu</a>
+				<ul class="sous">
+					<li><a href="consulterFilms.php">Consulter Les Films</a></li>
+					<li><a href="saisieTitreRecherche.html">Rechrcher</a></li>
+					<li><a href="saisieFilm.html">Ajouter un Film</a></li>
+					<li><a href="saisieTitreSuppression.html">Supprimer un Film</a></li>
+				</ul>
+			</li>
+		</ul>
+</nav><br/>
+		
+		<fieldset><br/>
+			<legend>Rechercher un Film</legend>
+			
+			<form action="rechercherFilm.php" method="GET" name="authentification" >
+   
+			   <label> Nom du film</label>
+			   <input type="text" required name="nomFilm" placeholder="saisire le nom d'un film"/>
+			  
+			   <input type="reset" value="Rénitialiser" />
+			   <input type="submit" value="Rechercher" />
+			   
+		</fieldset>
+			</form>
+			
+			<a href= vod.html>Acceuil</a>
+	</body>
+	</html>

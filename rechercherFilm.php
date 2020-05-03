@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr"></html>
+<html lang="fr">
     <head>
-        <title>Acceuil</title>
+        <title>Films </title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
           <link rel="stylesheet" href="style/vod.css">
     </head>
     <body style="background-color:#fbb456;">
-		
-		<center><h1>Acceuil</h1></center><br/>
-		
-		
-	<nav>
+    
+			
+<nav>
 		<ul>
 			<li class="deroulant"><a href= "vod.html">Acceuil</a></li>
 			<li class="deroulant"><a>Menu</a>
@@ -22,11 +20,30 @@
 				</ul>
 			</li>
 		</ul>
-	</nav><br/>
-		
-		<center><p>Bienvenu dans la page d'acceuil ! Consuler, Rechercher, Ajouter ou Supprimer un film à l'aide du menu déroulant !</p></center>
+</nav>			
 
+
+
+				<?php
+						$film = $_GET['nomFilm'] ;
+						$lines = file("data/vod.csv");
+						foreach($lines as $n => $line){
+						
+						
+						$infos = explode( ":" , $line ) ;
+						
+						if ($film == $line) {
+							
+							
+						echo $film;
+						}
+					
+						else {
+							echo"rien";
+						}}
+							?>
+
+			
+		</body>
+		</html>
 		
-		
-</html>
-    </body>
