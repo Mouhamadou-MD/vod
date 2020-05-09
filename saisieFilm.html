@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Ajouter Vod</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" href="style/vod.css">
+    </head>
+    <body style="background-color:#fbb456;">
+		
+<nav>
+		<ul>
+			<li class="deroulant"><a href= "vod.html">Acceuil</a></li>
+			<li class="deroulant"><a>Menu</a>
+				<ul class="sous">
+					<li><a href="consulterFilms.php">Consulter Les Films</a></li>
+					<li><a href="saisieTitreRecherche.html">Rechrcher</a></li>
+					<li><a href="saisieFilm.html">Ajouter un Film</a></li>
+					<li><a href="saisieTitreSuppression.html">Supprimer un Film</a></li>
+				</ul>
+			</li>
+		</ul>
+</nav><br/>
+		
+		<fieldset><br/>
+			<legend>Ajouter un Film</legend>
+			
+			<form action="ajouterFilm.php" method="POST" name="authentification" >
+   
+			   <label>Information sur le film</label>
+			   <input type="text" required name="nomFilm" placeholder="saisire le nom d'un film"/>
+			   <input type="text" required name="anneeFilm" placeholder="saisire l'annee du film"/>
+			   <input type="text" required name="realisateur" placeholder="saisire le nom du réalisateur"/>
+			   <input type="reset" value="Rénitialiser" />
+			   <input type="submit" value="Ajouter" />
+			   
+		</fieldset>
+			</form>
+			
+			<a href= vod.html>Acceuil</a>
+	</body>
+	</html>
