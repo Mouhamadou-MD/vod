@@ -20,30 +20,55 @@
 				</ul>
 			</li>
 		</ul>
-</nav>			
+</nav><br/>
+
+			<table bgcolor=black >
+		
+				<thead>
+				
+						<tr>
+					
+					<th>Nom</th>
+					<th>Année</th>
+					<th>Réalisateur</th>
+						</tr>
+				
+				</thead>
+			<tbody>
 
 
 
 				<?php
-						$film = $_GET['nomFilm'] ;
+						$film = $_POST['nomFilm'] ;
 						$lines = file("data/vod.csv");
+						$dispo = false;
 						foreach($lines as $n => $line){
+						list($nom,$annee,$realisateur) = explode(":", $line);
+          
+
+						if(strtolower($nom) == strtolower($film)){
+						echo "<tr>" ;
 						
 						
-						$infos = explode( ":" , $line ) ;
 						
-						if ($film == $line) {
-							
-							
-						echo $film;
+						echo "<td>" . strtoupper( $nom) . "</td>" ;
+						echo "<td>" . ucfirst( strtolower( $annee ) ) . "</td>" ;
+						echo "<td>" . ucwords( strtolower( $realisateur) ) . "</td>" ;
+						
+						echo "</tr>" ;
+						$dispo = true;
+						break;
 						}
-					
-						else {
-							echo"rien";
-						}}
-							?>
+						$dispo = false;
+						}
+						if(!$dispo){
+						echo "votre film n'est pas disponible ! ";
+						}
+						
+					?>
+
+						<br/><a href= saisieTitreRecherche.html>Réessayer</a>	
 
 			
 		</body>
 		</html>
-		
