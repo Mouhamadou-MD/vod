@@ -28,14 +28,14 @@
 	
 				
 				<?php
-			$ajout= $_POST["nomFilm"].":".$_POST["anneeFilm"].":".$_POST["realisateur"];
-			$fichier = fopen('data/vod.csv', 'a');
-			if(fwrite($fichier,"fait")== false)
-			echo "Film ajouté avec succès";
-			echo file_get_contents('data/csv');
-			fclose($fichier);
-			//if(file_put_contents('data/vod.csv', "$ajout")==true)
-			//echo"ajouté";
+			$dst = fopen( "data/vod.csv" , "a" ) ;
+			$ligne = $_POST["titre"] . ":" . $_POST["annee"] . ":" .
+		$_POST["realisateur"] . "\n" ;
+		fwrite( $dst , $ligne ) ;
+		fclose( $dst ) ;
+		echo "Titre : " . $_POST["titre"] . "<br/>" ;
+		echo "Année : " . $_POST["annee"] . "<br/>" ;
+		echo "Réalisateur : " . $_POST["realisateur"] . "<br/>" ;
 ?>
 						
 						

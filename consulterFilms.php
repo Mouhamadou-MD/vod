@@ -23,7 +23,7 @@
 </nav>			
 			
 			
-<h1>Liste des acteurs</h1><br/>
+<h1>Liste des Films</h1><br/>
 		
 		<table bgcolor=black >
 		
